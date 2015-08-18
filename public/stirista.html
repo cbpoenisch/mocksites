@@ -27,13 +27,45 @@
 		</section>
 
 		<section>
+			<!-- email subscribe form using angular validation -->
+			 <form name="emailSignup" ng-controller="EmailSignup">
+			    <label>Email:
+			      <input type="email" name="input" ng-model="email.text" required>
+			    </label>
+
+			    <div role="alert">
+			      <span class="error" ng-show="myForm.input.$error.required">
+			        This field is required</span>
+			      <span class="error" ng-show="myForm.input.$error.email">
+			        Invalid Email Address</span>
+			    </div>
+
+			    <tt>text = {{email.text}}</tt><br/>
+			    <tt>emailSignup.input.$valid = {{emailSignup.input.$valid}}</tt><br/>
+			    <tt>emailSignup.input.$error = {{emailSignup.input.$error}}</tt><br/>
+			    <tt>emailSignup.$valid = {{emailSignup.$valid}}</tt><br/>
+			    <tt>emailSignup.$error.required = {{!!emailSignup.$error.required}}</tt><br/>
+			    <tt>emailSignup.$error.email = {{!!emailSignup.$error.email}}</tt><br/>
+  			</form>
 		</section>
 	</main>
 
 	<nav>
+		<h3> More Plans </h3>
+		<li> Expert </li>
+		<li> Ace </li>
+		<li> Professional </li>
+		<li> Enterprise </li>
+		<li> See all plans </li>
 	</nav>
 
 	<footer>
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
 	</footer>
 </body>
 </html>
